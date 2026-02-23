@@ -23,7 +23,13 @@
 		<meta name="googlebot" content="index, follow, snippet" />
 		<link rel="shortcut icon" content="favicon.ico" />
 		<link rel="stylesheet" href="index.css" />
-		
+		    <!-- 1. Preconnect: 接続確立を早期化 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- 2. Preload Critical Fonts: ロゴと本文用フォントを優先読み込み -->
+    <!-- これにより optional でも表示される確率が上がります -->
+    <link rel="preload" href="https://fonts.gstatic.com/s/merriweathersans/v28/2-c79IRs1JiJN1FRAMjTN5zd9vgsFHXwcjfj9zlcxZI.woff2" as="font" type="font/woff2" crossorigin>
 
 		<script src="baremux/index.js"></script>
 		<script src="uv/uv.bundle.js"></script>
@@ -120,5 +126,20 @@
 		<script src="register-sw.js"></script>
 		<script src="search.js"></script>
 		<script src="index.js"></script>
+		<style>
+	h1{
+	font-family: "Merriweather Sans", sans-serif;
+    font-weight: 700;
+    font-style: italic;
+    font-size: 72px;
+    line-height: 1;
+    height: 72px;
+    letter-spacing: -1.5px;
+    text-decoration: none;
+    color: var(--text-main);
+    display: inline-block;
+    transition: transform 0.3s;
+	}
+		</style>
 	</body>
 </html>
